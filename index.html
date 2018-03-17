@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+<body>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);        }
+        *{
+            box-sizing: border-box
+        }
+        .block{
+            background: #fff;
+            min-height: 100vh;
+            width: 768px;
+            display: block;
+            margin: auto;
+            padding: 15px;
+        }
+        .block h1, .block h2, .block h3, .block h4, .block h5, .block h6{
+            color: #666;
+            margin: 0
+        }
+      
+        .btn{
+            background: transparent;
+            color: #00bf72;
+            margin: 15px;
+            border: none;
+            padding: 5px 15px;
+            width: 100px;
+            cursor: pointer;
+            border: 1px solid #00bf72;
+            transition: .3s;
+            position: relative;
+            top: 0px;
+            outline: none!important;
+        
+        }
+        .btn:hover{
+            color: #fff;
+            border: 1px solid #00bf72;
+            background: #00bf72;
+            top: -3px
+        }
+        .banner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .banner .col{
+            width: 33.33%;
+            padding: 15px;
+            cursor: pointer;
+        }
+    </style>
+<div class="block">
+    <h1>Test 1</h1>
+    <h2>Test 2</h2>
+    <h3>Test 3</h3>
+    <h4>Test 4</h4>
+    <h5>Test 5</h5>
+    <h6>Test 6</h6>
+    <div class="banner">
+        <div class="col">
+            <img src="img/facebook.png">
+        </div>
+        <div class="col">
+                <img src="img/facebook.png">
+        </div>
+        <div class="col">
+                <img src="img/facebook.png">
+        </div>
+
+    </div>
+    <button class="btn" onclick="sum()">Click Me</button>
+    <div class="box">
+
+    </div>
+</div>
+<script>
+    function noti(){
+        alert('hello')
+    }
+    function sum(){
+            alert(1+2+3)
+    }
+</script>    
+</body>
+</html>
