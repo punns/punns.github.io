@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-3equiv="X-UA-Compatible" content="ie=edge">
+        <title>Test</title>
+        <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    body{
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png");
+        background-repeat: repeat;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        font-family: 'Hi Melody', cursive;
+    }
+    img.cat{
+        max-width: 100%;
+        display: block;
+        margin: 0 auto 0 auto;
+        height: 300px;
+        transition: .3s;
+        border-radius: 50%
+
+    }
+    img.cat:hover{
+        transform: scale(1.1);
+    }
+    h1{
+        color: #666;
+        text-align: center;
+        font-size: 38px;
+        margin: 15px 0 15px 0;
+    }
+    h2{
+        font-size: 28px;
+        text-align: center;
+        margin: 5px 0 5px 0
+    }
+    form, .all-center {
+    display: flex;
+    justify-content: center;
+    }
+    label{
+        font-size: 22px
+    }
+    input{
+        border:none;
+        border-bottom:1px solid #666;
+        width: 300px;
+        margin:  0 10px;
+        height: 45px;
+        font-family: 'Hi Melody', cursive;
+        font-size: 22px;
+        padding: 5px 10px;
+        outline: none
+    }
+    .sub, .chang{
+         background: none;
+         margin: 0 5px;
+         border:1px solid #666;
+         transition: .3s;
+         padding: 0 5px;
+         min-width:80px;
+         font-family: 'Hi Melody', cursive;
+         font-size: 22px;
+         cursor: pointer;
+    }
+    .sub:hover, .chang:hover{
+        background: #666;
+        color: #fff;
+        
+    }
+
+    </style>
+        <script>
+                function changtext(){
+                    document.getElementById("content").innerHTML = 'My name is : ' + document.getElementById("mytext").value;
+                }
+                function onAlert (text){
+                    var marg = text + document.getElementById("mytext").value;
+                    alert(marg)
+                }
+            </script>
+    <h1>My Cat</h1>
+    <img class="cat" src="img/cat.jpg"> 
+    <h2 id="content">Cat Name</h2>
+    <div class="all-center">
+            <label>Cat Name : </label>
+            <input id="mytext" type="text" placeholder="cat name">
+            <button onclick="onAlert('hello.')" class="sub">ok</button>
+            <button onclick="changtext()" class="chang">Chang Text</button>
+        </div>
+
+</body>
+</html>
