@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+</head>
+<style>
+        #main {
+          text-align: center;
+        }
+        .card {
+          background-color: yellow;
+          padding: 10px;
+          margin: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="main">
+        <h1>To Do List</h1>
+        <input id="text-input" placeholder="to do list" />
+        <button onclick="addTask()">Add Task</button>
+        <div id="tasks"></div>
+      </div>
+      <script>
+        function checkTask() {
+          console.log('check')
+          var checkbox = document.getElementsByClassName('check')
+          var tasks = document.getElementsByClassName('card')
+          for (var i = 0; i < checkbox.length; i++) {
+            console.log(checkbox[i].checked)
+            var checked = checkbox[i].checked
+            if (checked) {
+              tasks[i].innerHTML = '<del class="card">' + tasks[i].innerHTML + '</del>'
+              checked = true
+            } else {
+              checked = false
+            }
+          }
+        }
+        function addTask() {
+          var textInput = document.getElementById('text-input')
+          console.log(textInput.value)
+          var tasks = document.getElementById('tasks')
+          var checkbox = '<input type="checkbox" class="check" onchange="checkTask()">'
+          var taskCard = '<div class="card">' + checkbox +  textInput.value +  '</div>'
+          tasks.innerHTML = tasks.innerHTML + taskCard
+        }
+      </script>
+    </body>
+</html>
